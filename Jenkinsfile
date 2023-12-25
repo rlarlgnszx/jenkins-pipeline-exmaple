@@ -8,7 +8,7 @@ pipeline {
 		stage("build") {
 			steps {
 				echo 'building the applicaiton...'
-				echo "building version ${NEW_VERSION}"
+				echo 'building version ${NEW_VERSION}'
 			}
 		}
 		stage("test") {
@@ -19,7 +19,7 @@ pipeline {
 		stage("deploy") {
 			steps {
 				echo 'deploying the applicaiton...'
-				echo "deploying with ${ADMIN_CREDENTIALS}"
+				echo 'deploying with ${ADMIN_CREDENTIALS}'
 				sh 'printf ${ADMIN_CREDENTIALS}'
 			}
 		}
